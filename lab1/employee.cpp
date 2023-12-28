@@ -17,7 +17,7 @@ void Employee::promote(int inRaiseAmount) {
 void Employee::demote(int inDemeritAmount) {
   setSalary(getSalary() - inDemeritAmount);
 }
-void Employee::hire() { fHired = true; }
+void Employee::hire() { fHired = true; } // Fix: Set fHired to true
 void Employee::fire() { fHired = false; }
 void Employee::display() {
   cout << "Employee: " << getLastName() << ", " << getFirstName() << endl;

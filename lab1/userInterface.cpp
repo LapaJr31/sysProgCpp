@@ -79,16 +79,28 @@ void doHire(Database& inDB) {
     cin >> firstName;
     cout << "Last name? ";
     cin >> lastName;
-   
-    cout << "Employee " << firstName << " " << lastName << " hired." << endl;
+
+    try {
+        inDB.addEmployee(firstName, lastName);
+        cout << "Employee " << firstName << " " << lastName << " hired." << endl;
+    } catch (const std::exception& e) {
+        cerr << "Could not hire employee: " << e.what() << endl;
+    }
 }
+
 
 void doFire(Database& inDB) {
     int employeeNumber;
     cout << "Employee number? ";
     cin >> employeeNumber;
-    
-    cout << "Employee " << employeeNumber << " fired." << endl;
+
+    try {
+        Employee& emp = inDB.getEmployee(employeeNumber);
+        emp.fire();
+        cout << "Employee " << employeeNumber << " fired." << endl;
+    } catch (const std::exception& e) {
+        cerr << "Could not fire employee: " << e.what() << endl;
+    }
 }
 
 void doPromote(Database& inDB) {
@@ -97,8 +109,14 @@ void doPromote(Database& inDB) {
     cin >> employeeNumber;
     cout << "Raise amount? ";
     cin >> raiseAmount;
-    
-    cout << "Employee " << employeeNumber << " promoted with raise of " << raiseAmount << "." << endl;
+
+    try {
+        Employee& emp = inDB.getEmployee(employeeNumber);
+        emp.promote(raiseAmount);
+        cout << "Employee " << employeeNumber << " promoted with raise of " << raiseAmount << "." << endl;
+    } catch (const std::exception& e) {
+        cerr << "Could not promote employee: " << e.what() << endl;
+    }
 }
 
 void addTaxi(vector<Taxi*>& taxis) {

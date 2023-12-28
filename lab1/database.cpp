@@ -2,6 +2,8 @@
 #include <iostream>
 #include <stdexcept>
 #include <string>
+#include "employee.h"
+
 using namespace std;
 namespace Records {
 Database::Database() {

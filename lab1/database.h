@@ -1,4 +1,3 @@
-// Database.h
 #ifndef DATABASE_H
 #define DATABASE_H
 
@@ -23,6 +22,9 @@ protected:
   int mNextSlot;
   int mNextEmployeeNumber;
 };
+
+
+
 } 
 
 #endif
