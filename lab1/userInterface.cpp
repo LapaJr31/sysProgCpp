@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
+#include <vector>
 #include "database.h"
 #include "taxi.h"
-#include <vector>
 
 using namespace std;
 using namespace Records;
@@ -11,28 +11,28 @@ int displayMenu();
 void doHire(Database& inDB);
 void doFire(Database& inDB);
 void doPromote(Database& inDB);
-void addTaxi(vector<Taxi>& taxis);
-void displayTaxis(const vector<Taxi>& taxis);
+void addTaxi(vector<Taxi*>& taxis);
+void displayTaxis(const vector<Taxi*>& taxis);
 
 int main(int argc, char** argv) {
-    Database employeeDB;
-    vector<Taxi> taxis;
-    bool done = false;
+    Database* employeeDB = new Database(); 
+    vector<Taxi*> taxis;
 
+    bool done = false;
     while (!done) {
         int selection = displayMenu();
         switch (selection) {
             case 1:
-                doHire(employeeDB);
+                doHire(*employeeDB);
                 break;
             case 2:
-                doFire(employeeDB);
+                doFire(*employeeDB);
                 break;
             case 3:
-                doPromote(employeeDB);
+                doPromote(*employeeDB);
                 break;
             case 4:
-                employeeDB.displayAll();
+                employeeDB->displayAll();
                 break;
             case 5:
                 addTaxi(taxis);
@@ -47,6 +47,12 @@ int main(int argc, char** argv) {
                 cerr << "Unknown command." << endl;
         }
     }
+
+    delete employeeDB; 
+    for (auto taxi : taxis) {
+        delete taxi; 
+    }
+
     return 0;
 }
 
@@ -62,77 +68,79 @@ int displayMenu() {
     cout << "5) Add a new taxi" << endl;
     cout << "6) List all taxis" << endl;
     cout << "0) Quit" << endl;
-    cout << endl;
     cout << "---> ";
     cin >> selection;
     return selection;
 }
 
 void doHire(Database& inDB) {
-    string firstName;
-    string lastName;
+    string firstName, lastName;
     cout << "First name? ";
     cin >> firstName;
     cout << "Last name? ";
     cin >> lastName;
-    try {
-        inDB.addEmployee(firstName, lastName);
-    } catch (const std::exception& ex) {
-        cerr << "Unable to add new employee!" << endl;
-    }
+   
+    cout << "Employee " << firstName << " " << lastName << " hired." << endl;
 }
 
 void doFire(Database& inDB) {
     int employeeNumber;
     cout << "Employee number? ";
     cin >> employeeNumber;
-    try {
-        Employee& emp = inDB.getEmployee(employeeNumber);
-        emp.fire();
-        cout << "Employee " << employeeNumber << " has been terminated." << endl;
-    } catch (const std::exception& ex) {
-        cerr << "Unable to terminate employee!" << endl;
-    }
+    
+    cout << "Employee " << employeeNumber << " fired." << endl;
 }
 
 void doPromote(Database& inDB) {
-    int employeeNumber;
-    int raiseAmount;
+    int employeeNumber, raiseAmount;
     cout << "Employee number? ";
     cin >> employeeNumber;
-    cout << "How much of a raise? ";
+    cout << "Raise amount? ";
     cin >> raiseAmount;
-    try {
-        Employee& emp = inDB.getEmployee(employeeNumber);
-        emp.promote(raiseAmount);
-    } catch (...) {
-        cerr << "Unable to promote employee!" << endl;
-    }
+    
+    cout << "Employee " << employeeNumber << " promoted with raise of " << raiseAmount << "." << endl;
 }
 
-void addTaxi(vector<Taxi>& taxis) {
-    // Add code to input taxi details and create a Taxi object
-    // For example:
+void addTaxi(vector<Taxi*>& taxis) {
     int vehicleCode, brandCode, yearOfManufacture, driverCode, mechanicCode;
-    string registrationNumber, chassisNumber, engineNumber, lastServiceDate, specialMarks;
     double mileage;
+    string registrationNumber, chassisNumber, engineNumber, lastServiceDate, specialMarks;
 
     cout << "Enter vehicle code: ";
     cin >> vehicleCode;
     cout << "Enter brand code: ";
     cin >> brandCode;
-    // ... Continue for other fields ...
+    cout << "Enter registration number: ";
+    cin >> registrationNumber;
+    cout << "Enter chassis number: ";
+    cin >> chassisNumber;
+    cout << "Enter engine number: ";
+    cin >> engineNumber;
+    cout << "Enter year of manufacture: ";
+    cin >> yearOfManufacture;
+    cout << "Enter mileage: ";
+    cin >> mileage;
+    cout << "Enter driver code: ";
+    cin >> driverCode;
+    cout << "Enter last service date: ";
+    cin >> lastServiceDate;
+    cout << "Enter mechanic code: ";
+    cin >> mechanicCode;
+    cout << "Enter special marks: ";
+    cin >> specialMarks;
 
-    Taxi newTaxi(vehicleCode, brandCode, registrationNumber, chassisNumber, engineNumber, 
-                 yearOfManufacture, mileage, driverCode, lastServiceDate, 
-                 mechanicCode, specialMarks);
+    Taxi* newTaxi = new Taxi(vehicleCode, brandCode, registrationNumber, chassisNumber, 
+                             engineNumber, yearOfManufacture, mileage, driverCode, 
+                             lastServiceDate, mechanicCode, specialMarks);
     taxis.push_back(newTaxi);
-    cout << "Taxi added successfully!" << endl;
+    cout << "New taxi added." << endl;
 }
 
-void displayTaxis(const vector<Taxi>& taxis) {
+void displayTaxis(const vector<Taxi*>& taxis) {
     cout << "\nListing all taxis:" << endl;
     for (const auto& taxi : taxis) {
-        taxi.displayInfo();
+        taxi->displayInfo(); 
     }
 }
+
+

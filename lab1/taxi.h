@@ -13,7 +13,6 @@ public:
 
     void displayInfo() const;
 
-    // You can add more functions here to manipulate or access Taxi data
 
 private:
     int vehicleCode;
