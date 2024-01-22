@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/home/lpss/Projects/KPI/qt_lab3/build",
+  "command": "/sbin/i686-w64-mingw32-g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/lpss/Projects/KPI/qt_lab3/build/qt_lab3_autogen/include -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -isystem /usr/include -g -std=gnu++17 -mno-direct-extern-access -o CMakeFiles/qt_lab3.dir/qt_lab3_autogen/mocs_compilation.cpp.o -c /home/lpss/Projects/KPI/qt_lab3/build/qt_lab3_autogen/mocs_compilation.cpp",
+  "file": "/home/lpss/Projects/KPI/qt_lab3/build/qt_lab3_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/qt_lab3.dir/qt_lab3_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/home/lpss/Projects/KPI/qt_lab3/build",
+  "command": "/sbin/i686-w64-mingw32-g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/lpss/Projects/KPI/qt_lab3/build/qt_lab3_autogen/include -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -isystem /usr/include -g -std=gnu++17 -mno-direct-extern-access -o CMakeFiles/qt_lab3.dir/main.cpp.o -c /home/lpss/Projects/KPI/qt_lab3/main.cpp",
+  "file": "/home/lpss/Projects/KPI/qt_lab3/main.cpp",
+  "output": "CMakeFiles/qt_lab3.dir/main.cpp.o"
+},
+{
+  "directory": "/home/lpss/Projects/KPI/qt_lab3/build",
+  "command": "/sbin/i686-w64-mingw32-g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/lpss/Projects/KPI/qt_lab3/build/qt_lab3_autogen/include -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -isystem /usr/include -g -std=gnu++17 -mno-direct-extern-access -o CMakeFiles/qt_lab3.dir/mainwindow.cpp.o -c /home/lpss/Projects/KPI/qt_lab3/mainwindow.cpp",
+  "file": "/home/lpss/Projects/KPI/qt_lab3/mainwindow.cpp",
+  "output": "CMakeFiles/qt_lab3.dir/mainwindow.cpp.o"
+},
+{
+  "directory": "/home/lpss/Projects/KPI/qt_lab3/build",
+  "command": "/sbin/i686-w64-mingw32-g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/lpss/Projects/KPI/qt_lab3/build/qt_lab3_autogen/include -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -isystem /usr/include -g -std=gnu++17 -mno-direct-extern-access -o CMakeFiles/qt_lab3.dir/taxi.cpp.o -c /home/lpss/Projects/KPI/qt_lab3/taxi.cpp",
+  "file": "/home/lpss/Projects/KPI/qt_lab3/taxi.cpp",
+  "output": "CMakeFiles/qt_lab3.dir/taxi.cpp.o"
+},
+{
+  "directory": "/home/lpss/Projects/KPI/qt_lab3/build",
+  "command": "/sbin/i686-w64-mingw32-g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/lpss/Projects/KPI/qt_lab3/build/qt_lab3_autogen/include -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -isystem /usr/include -g -std=gnu++17 -mno-direct-extern-access -o CMakeFiles/qt_lab3.dir/database.cpp.o -c /home/lpss/Projects/KPI/qt_lab3/database.cpp",
+  "file": "/home/lpss/Projects/KPI/qt_lab3/database.cpp",
+  "output": "CMakeFiles/qt_lab3.dir/database.cpp.o"
+},
+{
+  "directory": "/home/lpss/Projects/KPI/qt_lab3/build",
+  "command": "/sbin/i686-w64-mingw32-g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/lpss/Projects/KPI/qt_lab3/build/qt_lab3_autogen/include -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -isystem /usr/include -g -std=gnu++17 -mno-direct-extern-access -o CMakeFiles/qt_lab3.dir/employee.cpp.o -c /home/lpss/Projects/KPI/qt_lab3/employee.cpp",
+  "file": "/home/lpss/Projects/KPI/qt_lab3/employee.cpp",
+  "output": "CMakeFiles/qt_lab3.dir/employee.cpp.o"
+}
+]

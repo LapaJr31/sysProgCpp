@@ -1,0 +1,9 @@
+/home/lpss/Projects/KPI/qt_lab3/build/CMakeFiles/qt_lab3.dir
+/home/lpss/Projects/KPI/qt_lab3/build/CMakeFiles/edit_cache.dir
+/home/lpss/Projects/KPI/qt_lab3/build/CMakeFiles/rebuild_cache.dir
+/home/lpss/Projects/KPI/qt_lab3/build/CMakeFiles/list_install_components.dir
+/home/lpss/Projects/KPI/qt_lab3/build/CMakeFiles/install.dir
+/home/lpss/Projects/KPI/qt_lab3/build/CMakeFiles/install/local.dir
+/home/lpss/Projects/KPI/qt_lab3/build/CMakeFiles/install/strip.dir
+/home/lpss/Projects/KPI/qt_lab3/build/CMakeFiles/qt_lab3_autogen_timestamp_deps.dir
+/home/lpss/Projects/KPI/qt_lab3/build/CMakeFiles/qt_lab3_autogen.dir
